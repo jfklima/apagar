@@ -1,30 +1,32 @@
 (emap
-  "n" "C-n"
-  "p" "C-p"
+  "n" 'next-line
+  "p" 'previous-line
 
-  "b" "C-b"
-  "f" "C-f"
+  "b" 'backward-char
+  "f" 'forward-char
 
-  "a" "C-a"
-  "e" "C-e"
+  "a" 'beginning-of-line
+  "e" 'end-of-line
 
-  "l" "C-l"
+  "l" 'recenter-top-bottom
 
-  "v" "C-v"
+  "v" 'scroll-up-command
+  "]" 'scroll-other-window
+  "[" 'scroll-other-window-down
 
-  "m" "C-m"
-  "o" "C-o"
+  "m" 'newline
+  "o" 'open-line
 
-  "d" "C-d"
+  "d" 'delete-char
 
-  "k" "C-k"
+  "k" 'kill-line
 
-  "y" "C-y"
+  "y" 'yank
 
-  "C" "C-c C-c"
+  ";" 'comment-line
+  "/" 'undo
 
-  ";" "C-x C-;"
-  "/" "C-/")
+  "C" "C-c C-c")
 
 (imap
   "TAB" 'completion-at-point
