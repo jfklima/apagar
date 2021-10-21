@@ -70,11 +70,23 @@
    (general-create-definer mmap :prefix "SPC m"))
 
 (use-package ido
+  :disabled t
   :config
   (setq ido-enable-flex-matching t)
   (setq max-mini-window-height 0.5)
   (setq ido-file-extensions-order '(".py" ".el" ".org" ".txt"))
   (define-key ido-file-completion-map (kbd "C-l") 'ido-delete-backward-word-updir)
   (ido-mode 1))
+
+(use-package helm :ensure t
+  :diminish ""
+  :init
+  (helm-mode 1)
+  :config
+  (global-set-key [remap find-file] 'helm-find-files)
+  (global-set-key [remap execute-extended-command] 'helm-M-x)
+  (global-set-key [remap switch-to-buffer] 'helm-buffers-list)
+  (global-set-key [remap isearch-forward] 'helm-occur)
+  )
 
 (provide 'core)
