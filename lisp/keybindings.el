@@ -2,11 +2,27 @@
   "n" 'next-line
   "p" 'previous-line
 
+  ;; teclas disponiveis
+  "r" nil
+  "t" nil
+  "u" nil
+  "s" nil
+  "h" nil
+  "ç" nil
+  "x" nil
+  "C" nil
+  "," nil
+  "." nil
+  "\\" nil
+
   "b" 'backward-char
   "f" 'forward-char
 
   "a" 'beginning-of-line
   "e" 'end-of-line
+
+  "M-p" 'backward-sentence
+  "M-n" 'forward-sentence
 
   "l" 'recenter-top-bottom
 
@@ -25,6 +41,8 @@
 
   ";" 'comment-line
   "/" 'undo
+
+  "g" 'keyboard-quit
 
   "C" "C-c C-c")
 
