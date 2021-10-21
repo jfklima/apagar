@@ -83,6 +83,32 @@
   :init
   (helm-mode 1)
   :config
+  (require 'helm-config)
+  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+  (define-key helm-map (kbd "C-i")  'helm-select-action)
+
+  (setq helm-split-window-in-side-p t
+	helm-echo-input-in-header-line t)
+
+  (defun spacemacs//helm-hide-minibuffer-maybe ()
+  "Hide minibuffer in Helm session if we use the header line as input field."
+  (when (with-helm-buffer helm-echo-input-in-header-line)
+    (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
+      (overlay-put ov 'window (selected-window))
+      (overlay-put ov 'face
+                   (let ((bg-color (face-background 'default nil)))
+                     `(:background ,bg-color :foreground ,bg-color)))
+      (setq-local cursor-type nil))))
+
+
+  (add-hook 'helm-minibuffer-set-up-hook
+            'spacemacs//helm-hide-minibuffer-maybe)
+
+  (setq helm-autoresize-max-height 60)
+  (setq helm-autoresize-min-height 20)
+  (helm-autoresize-mode 1)
+
+  ;; remap commands
   (global-set-key [remap find-file] 'helm-find-files)
   (global-set-key [remap execute-extended-command] 'helm-M-x)
   (global-set-key [remap switch-to-buffer] 'helm-buffers-list)
