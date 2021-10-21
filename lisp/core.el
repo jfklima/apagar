@@ -69,4 +69,12 @@
    (general-create-definer lmap :keymaps 'multistate-edit-state-map :prefix "SPC")
    (general-create-definer mmap :prefix "SPC m"))
 
+(use-package ido
+  :config
+  (setq ido-enable-flex-matching t)
+  (setq max-mini-window-height 0.5)
+  (setq ido-file-extensions-order '(".py" ".el" ".org" ".txt"))
+  (define-key ido-file-completion-map (kbd "C-l") 'ido-delete-backward-word-updir)
+  (ido-mode 1))
+
 (provide 'core)
