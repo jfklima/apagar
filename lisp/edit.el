@@ -1,3 +1,5 @@
+(add-hook 'text-mode-hook 'auto-fill-mode)
+
 (use-package avy :ensure t
   :config
   (setq avy-background t)
