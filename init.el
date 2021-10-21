@@ -64,7 +64,7 @@
   (setq ido-enable-flex-matching t)
   (setq max-mini-window-height 0.5)
   (setq ido-file-extensions-order '(".py" ".el" ".org" ".txt"))
-
+  (define-key ido-file-completion-map (kbd "C-l") 'ido-delete-backward-word-updir)
   (ido-mode 1))
 
 ;; adiciona os meus arquivos extras de configuração ao load-path
