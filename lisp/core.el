@@ -47,6 +47,7 @@
    :parent 'multistate-edit-state-map)
 
   :bind
+  ("M-m" . 'multistate-mode)
   (:map multistate-edit-state-map
         ("i" . multistate-insert-state)
         ("R" . multistate-replace-state)
