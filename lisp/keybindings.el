@@ -50,6 +50,8 @@
   "w u" 'delete-other-windows
   "w o" 'other-window
 
+  "s s" 'isearch-forward
+
   "q q" 'save-buffers-kill-emacs)
 
 (mmap :keymaps 'emacs-lisp-mode-map
