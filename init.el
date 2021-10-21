@@ -62,6 +62,7 @@
 ;; adiciona os meus arquivos extras de configuração ao load-path
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+(require 'ui)
 (require 'core)
 (require 'keybindings)
 (require 'edit)
