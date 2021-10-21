@@ -9,4 +9,9 @@
   (emap
     "a" 'crux-move-beginning-of-line))
 
+(use-package avy-zap :ensure t
+  :config
+  (emap
+    "z" 'avy-zap-to-char))
+
 (provide 'edit)
