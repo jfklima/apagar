@@ -52,6 +52,7 @@
 
   "g" 'keyboard-quit
 
+  "SPC k" '(:def nil :wk "kmacro")
   "SPC ki" 'start-kbd-macro
   "SPC ke" 'end-kbd-macro
   "." 'kmacro-end-and-call-macro
@@ -74,24 +75,32 @@
   "sw" 'kill-ring-save)
 
 (lmap
-  "SPC" 'execute-extended-command
-  "TAB" '(lambda () (interactive) (switch-to-buffer (other-buffer)))
-  "h" help-map
+  "SPC" '(:def execute-extended-command :wk "M-x")
+  "TAB" '(:def (lambda () (interactive) (switch-to-buffer (other-buffer)))
+	       :wk "last-buffer")
+  "h" '(:def help-map :wk "help")
 
+  "f" '(:def nil :wk "file")
   "f f" 'find-file
   "f i" 'open-init
 
+  "b" '(:def nil :wk "buffer")
   "b b" 'switch-to-buffer
   "b s" 'save-buffer
   "b k" 'kill-this-buffer
   "b a" 'beginning-of-buffer
   "b e" 'end-of-buffer
 
+  "w" '(:def nil :wk "window")
   "w u" 'delete-other-windows
   "w o" 'other-window
 
+  "s" '(:def nil :wk "search")
   "s s" 'isearch-forward
 
+  "m" '(:def nil :wk "mode")
+
+  "q" '(:def nil :wk "quit")
   "q q" 'save-buffers-kill-emacs)
 
 (mmap :keymaps 'emacs-lisp-mode-map

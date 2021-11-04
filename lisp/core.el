@@ -58,7 +58,8 @@
 	("<return>" . multistate-edit-state))
   (:map multistate-replace-state-map
         ("<return>" . multistate-edit-state))))
- (use-package general :ensure t
+
+(use-package general :ensure t
    :init
    (require 'multistate)
    :config
@@ -115,5 +116,12 @@
   (global-set-key [remap switch-to-buffer] 'helm-buffers-list)
   (global-set-key [remap isearch-forward] 'helm-occur)
   )
+
+(use-package which-key :ensure t
+  :config
+  (setq which-key-idle-delay 0.7)
+  (setq which-key-idle-secondary-delay 0.1)
+  (setq which-key-show-prefix 'left)
+  (which-key-mode 1))
 
 (provide 'core)
