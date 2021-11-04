@@ -2,7 +2,7 @@
 
 (use-package org
   :hook
-  (org-mode . 'org-shifttab)
+  (org-mode . org-shifttab)
   :config
   (setq org-hide-leading-stars t)
   (mmap
@@ -23,10 +23,12 @@
   (interactive)
   (find-file "~/org/todo.org"))
 
-(setq org-agenda-files '("~/org/notas.org"))
+(setq org-agenda-files '("~/org/todo.org" "~/org/organizador.org"))
 
 (lmap
+  "o" '(:def nil :wk "org")
   "o a" (lambda () (interactive) (org-agenda nil "a" nil))
-  "o o" (lambda () (interactive) (find-file "~/org/organizador.org")))
+  "o o" (lambda () (interactive) (find-file "~/org/organizador.org"))
+  "o c" 'org-capture)
 
 (provide 'organize)
