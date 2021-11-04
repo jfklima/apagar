@@ -32,6 +32,10 @@
 ;; desabilitando a geração de arquivos de backup
 (setq make-backup-file nil)
 
+;; defindo o tamanho da fonte
+(set-face-attribute 'default nil :height 160)
+
+;; define um thema de cor escuro
 (load-theme 'deeper-blue)
 
 ;; define o text-mode como modo padrão
