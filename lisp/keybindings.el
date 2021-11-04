@@ -63,6 +63,8 @@
   "ri" 'insert-register
   "ra" 'append-to-register
 
+  "q" 'quit-window
+
   "ç" "C-x C-x"
   "sc" "C-c C-c")
 
