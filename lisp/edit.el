@@ -22,6 +22,13 @@
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1)
   (setq company-selection-wrap-around t)
+
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+  (define-key company-mode-map (kbd "<return>") 'company-abort)
+
+  (imap
+    "<tab>" 'company-complete)
+
   )
 
 (provide 'edit)
