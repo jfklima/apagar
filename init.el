@@ -20,6 +20,10 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; performance
+(setq gc-cons-threshold 100000000)
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+
 ;; desliga o bip, chato!!!
 (setq visible-bell t)
 
