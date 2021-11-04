@@ -46,7 +46,8 @@
 (setq-default major-mode 'text-mode)
 
 ;; remove os espaços em branco ao salvar.
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (remove-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; vê o número da linha quando está programando
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)

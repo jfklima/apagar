@@ -28,7 +28,12 @@
 
   (imap
     "<tab>" 'company-complete)
-
   )
+
+(use-package super-save :ensure t
+  :config
+  (setq super-save-auto-save-when-idle t)
+  (setq super-save-idle-duration 0.1)
+  (super-save-mode +1))
 
 (provide 'edit)

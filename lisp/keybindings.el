@@ -86,7 +86,8 @@
 
   "b" '(:def nil :wk "buffer")
   "b b" 'switch-to-buffer
-  "b s" 'save-buffer
+  ;; "b s" 'save-buffer
+  "b s" 'delete-trailing-whitespace
   "b k" 'kill-this-buffer
   "b a" 'beginning-of-buffer
   "b e" 'end-of-buffer
