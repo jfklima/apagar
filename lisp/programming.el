@@ -12,6 +12,9 @@
   :config
   (setq helm-dash-min-length 2))
 
+(use-package pyenv-mode :ensure t
+  :hook (python-mode . pyenv-mode))
+
 ;; emacs-lisp
 
 (mmap
