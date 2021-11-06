@@ -40,6 +40,7 @@
 
 (mmap
   :keymaps 'python-mode-map
-  "s" '(:def helm-dash :wk "dash"))
+  "s" '(:def helm-dash :wk "dash")
+  "i" 'imenu)
 
 (provide 'programming)
