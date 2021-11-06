@@ -36,4 +36,19 @@
   (setq super-save-idle-duration 0.1)
   (super-save-mode +1))
 
+(use-package move-text :ensure t
+  :config
+  (emap
+    "t" 'move-text-down
+    "T" 'move-text-up)
+  (vmap
+    "t" 'move-text-down
+    "T" 'move-text-up))    
+
+(use-package undo-fu :ensure t
+  :config
+  (emap
+    "/" 'undo-fu-only-undo
+    "C-/" 'undo-fu-only-redo))
+
 (provide 'edit)

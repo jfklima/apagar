@@ -39,9 +39,6 @@
 ;; defindo o tamanho da fonte
 (set-face-attribute 'default nil :height 160)
 
-;; define um thema de cor escuro
-(load-theme 'deeper-blue)
-
 ;; define o text-mode como modo padrão
 (setq-default major-mode 'text-mode)
 

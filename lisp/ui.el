@@ -7,7 +7,10 @@
 
 ;; usa um thema de cor do spacemacs
 (use-package spacemacs-theme :ensure t
+  :disabled t
   :defer t
   :init (load-theme 'spacemacs-dark t))
+
+(load-theme 'leuven)
 
 (provide 'ui)
