@@ -5,7 +5,7 @@
   (:map projectile-mode-map
 	("M-p" . projectile-command-map))
   :config
-  (setq projectile-project-search-path '("~/projetos/"))
+  (setq projectile-project-search-path '("~/projetos/" "~/workspace"))
 
   (lmap
     "p" '(:def nil :wk "project")
