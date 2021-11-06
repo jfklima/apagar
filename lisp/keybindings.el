@@ -69,6 +69,8 @@
   "sc" "C-c C-c")
 
 (imap
+  "C-l" 'backward-kill-word
+  "M-l" 'backward-delete-char
   "TAB" 'completion-at-point
   "SPC" 'self-insert-command)
 
@@ -93,6 +95,7 @@
   "b k" 'kill-this-buffer
   "b a" 'beginning-of-buffer
   "b e" 'end-of-buffer
+  "b h" 'split-window-below
 
   "w" '(:def nil :wk "window")
   "w u" 'delete-other-windows

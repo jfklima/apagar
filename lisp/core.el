@@ -12,6 +12,10 @@
   (multistate-replace-state-enter . overwrite-mode)
   (multistate-replace-state-exit .  (lambda () (overwrite-mode 0)))
 
+  ;; enable caps-lock-mode in Upper state
+  (multistate-upper-state-enter . caps-lock-mode)
+  (multistate-upper-state-exit .  (lambda () (caps-lock-mode 0)))
+
   :config
   (add-hook 'deactivate-mark-hook 'multistate-edit-state)
 
@@ -39,6 +43,11 @@
    :lighter "R"
    :cursor 'hbar)
 
+  (multistate-define-state
+   'upper
+   :lighter "U"
+   :cursor '(hbar . 5))
+
   ;; Visual state
   (multistate-define-state
    'visual
@@ -51,9 +60,12 @@
   (:map multistate-edit-state-map
         ("i" . multistate-insert-state)
 	("sr" . multistate-replace-state)
+	("su" . multistate-upper-state)
         ("<return>" . multistate-visual-state)
   (:map multistate-insert-state-map
         ("<return>" . multistate-edit-state))
+  (:map multistate-upper-state-map
+	("<return>" . multistate-edit-state))
   (:map multistate-visual-state-map
 	("<return>" . multistate-edit-state))
   (:map multistate-replace-state-map

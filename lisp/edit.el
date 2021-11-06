@@ -51,4 +51,6 @@
     "/" 'undo-fu-only-undo
     "C-/" 'undo-fu-only-redo))
 
+(use-package caps-lock :ensure t)
+
 (provide 'edit)
