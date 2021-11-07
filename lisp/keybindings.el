@@ -74,6 +74,9 @@
   "TAB" 'completion-at-point
   "SPC" 'self-insert-command)
 
+(umap
+  "SPC" 'self-insert-command)
+
 (vmap
   "w" 'kill-region
   "sw" 'kill-ring-save)

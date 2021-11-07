@@ -46,7 +46,8 @@
   (multistate-define-state
    'upper
    :lighter "U"
-   :cursor '(hbar . 5))
+   :cursor '(hbar . 5)
+   :parent 'multistate-emacs-state-map)
 
   ;; Visual state
   (multistate-define-state
@@ -61,7 +62,7 @@
         ("i" . multistate-insert-state)
 	("sr" . multistate-replace-state)
 	("su" . multistate-upper-state)
-        ("<return>" . multistate-visual-state)
+        ("<return>" . multistate-visual-state))
   (:map multistate-insert-state-map
         ("<return>" . multistate-edit-state))
   (:map multistate-upper-state-map
@@ -69,7 +70,7 @@
   (:map multistate-visual-state-map
 	("<return>" . multistate-edit-state))
   (:map multistate-replace-state-map
-        ("<return>" . multistate-edit-state))))
+        ("<return>" . multistate-edit-state)))
 
 (use-package general :ensure t
    :init
@@ -79,6 +80,7 @@
    (general-create-definer imap :keymaps 'multistate-insert-state-map)
    (general-create-definer vmap :keymaps 'multistate-visual-state-map)
    (general-create-definer rmap :keymaps 'multistate-replace-state-map)
+   (general-create-definer umap :keymaps 'multistate-upper-state-map)
    (general-create-definer lmap :keymaps 'multistate-edit-state-map :prefix "SPC")
    (general-create-definer mmap :prefix "SPC m"))
 

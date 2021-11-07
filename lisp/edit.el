@@ -24,7 +24,7 @@
   (setq company-selection-wrap-around t)
 
   (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
-  (define-key company-mode-map (kbd "<return>") 'company-abort)
+  (define-key company-active-map (kbd "<return>") 'company-abort)
 
   (imap
     "<tab>" 'company-complete)
@@ -52,5 +52,20 @@
     "C-/" 'undo-fu-only-redo))
 
 (use-package caps-lock :ensure t)
+
+(use-package fix-word :ensure t
+  :config
+  (global-set-key [remap upcase-word] 'fix-word-upcase))
+
+(use-package ace-window :ensure t
+  :config
+  (setq aw-background t)
+  (setq aw-ignore-current t)
+  (setq aw-keys '(?a ?s ?d ?f ?j ?k ?l ?l))
+  (lmap
+    "w -" 'split-window-below
+    "w |" 'split-window-right
+    "w o" '(:def ace-window :wk "other-window")
+    "w d" 'delete-window))
 
 (provide 'edit)
