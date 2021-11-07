@@ -15,7 +15,7 @@
 ;; emacs-lisp
 
 (mmap
-  :keymaps 'emacs-lisp-mode-map
+  :keymaps 'emacs-lisp-mode-map 
   "i" '(lambda () (interactive)
 	 (progn
 	   (insert-parentheses)
@@ -42,5 +42,13 @@
   :keymaps 'python-mode-map
   "s" '(:def helm-dash :wk "dash")
   "i" 'imenu)
+
+(use-package flycheck :ensure t
+  :hook (python-mode . flycheck-mode)
+  :config
+  (lmap
+    "e" '(:def nil :wk "erros")
+    "e n" 'flycheck-next-error
+    "e p" 'flycheck-previous-error))
 
 (provide 'programming)
