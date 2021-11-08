@@ -5,12 +5,7 @@
 (use-package doom-modeline :ensure t
   :init (doom-modeline-mode 1))
 
-;; usa um thema de cor do spacemacs
-(use-package spacemacs-theme :ensure t
-  :disabled t
-  :defer t
-  :init (load-theme 'spacemacs-dark t))
-
+;; define um tema de cor light
 (load-theme 'leuven)
 
 (provide 'ui)

@@ -6,3 +6,5 @@ transient/
 eshell/
 recentf
 projectile-bookmarks.eld
+.lsp-session-v1
+.mc-lists.el

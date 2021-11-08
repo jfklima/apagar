@@ -70,8 +70,8 @@
 
 (require 'ui)
 (require 'core)
-(require 'keybindings)
 (require 'edit)
+(require 'keybindings)
 (require 'manage-proj)
 (require 'organize)
 (require 'programming)
