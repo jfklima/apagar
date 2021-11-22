@@ -67,4 +67,5 @@
 (require 'keybindings)
 (require 'edit)
 (require 'manage-proj)
+(require 'organize)
 (require 'programming)
