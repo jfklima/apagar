@@ -2,48 +2,56 @@
   "n" 'next-line
   "p" 'previous-line
 
-  ;; teclas disponiveis
-  "r" nil
-  "t" nil
-  "u" nil
-  "s" nil
-  "h" nil
-  "ç" nil
-  "x" nil
-  "C" nil
-  "," nil
-  "." nil
-  "\\" nil
-
   "b" 'backward-char
   "f" 'forward-char
 
   "a" 'beginning-of-line
   "e" 'end-of-line
 
-  "M-p" 'backward-sentence
-  "M-n" 'forward-sentence
+  "A" 'backward-sentence
+  "E" 'forward-sentence
+
+  "C-SPC" '(lambda () (interactive) ())
 
   "l" 'recenter-top-bottom
 
   "v" 'scroll-up-command
+  "V" 'scroll-down-command
   "]" 'scroll-other-window
   "[" 'scroll-other-window-down
+
+  "G" 'goto-line
 
   "m" 'newline
   "o" 'open-line
 
+  "Q" 'fill-paragraph
+  "J" 'join-line
+
   "d" 'delete-char
+  "x" 'delete-backward-char
+
+  "D" 'kill-word
+  "X" 'backward-kill-word
 
   "k" 'kill-line
+  "K" 'kill-whole-line
+
+  "\\" 'delete-horizontal-space
 
   "y" 'yank
+  "Y" 'yank-pop
 
   ";" 'comment-line
   "/" 'undo
 
   "g" 'keyboard-quit
 
+  "(" 'start-kbd-macro
+  ")" 'end-kbd-macro
+  "." 'kmacro-end-and-call-macro
+
+  "ç" "C-x C-x"
   "C" "C-c C-c")
 
 (imap
