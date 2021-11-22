@@ -5,42 +5,46 @@
   "b" 'backward-char
   "f" 'forward-char
 
+  "sb" 'backward-word
+  "sf" 'forward-word
+
   "a" 'beginning-of-line
   "e" 'end-of-line
 
-  "A" 'backward-sentence
-  "E" 'forward-sentence
+  "sa" 'backward-sentence
+  "se" 'forward-sentence
 
   "C-SPC" '(lambda () (interactive) ())
 
   "l" 'recenter-top-bottom
+  "sr" 'move-to-window-line-top-bottom
 
   "v" 'scroll-up-command
   "V" 'scroll-down-command
   "]" 'scroll-other-window
   "[" 'scroll-other-window-down
 
-  "G" 'goto-line
+  "sg" 'goto-line
 
   "m" 'newline
   "o" 'open-line
 
-  "Q" 'fill-paragraph
-  "J" 'join-line
+  "sq" 'fill-paragraph
+  "sj" 'join-line
 
   "d" 'delete-char
   "x" 'delete-backward-char
 
-  "D" 'kill-word
-  "X" 'backward-kill-word
+  "sd" 'kill-word
+  "sx" 'backward-kill-word
 
   "k" 'kill-line
-  "K" 'kill-whole-line
+  "sk" 'kill-whole-line
 
   "\\" 'delete-horizontal-space
 
   "y" 'yank
-  "Y" 'yank-pop
+  "sy" 'yank-pop
 
   ";" 'comment-line
   "/" 'undo
@@ -52,7 +56,7 @@
   "." 'kmacro-end-and-call-macro
 
   "ç" "C-x C-x"
-  "C" "C-c C-c")
+  "sc" "C-c C-c")
 
 (imap
   "TAB" 'completion-at-point
