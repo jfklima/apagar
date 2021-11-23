@@ -17,10 +17,10 @@
   "C-SPC" '(lambda () (interactive) ())
 
   "l" 'recenter-top-bottom
-  "sr" 'move-to-window-line-top-bottom
+  "sl" 'move-to-window-line-top-bottom
 
   "v" 'scroll-up-command
-  "V" 'scroll-down-command
+  "sv" 'scroll-down-command
   "]" 'scroll-other-window
   "[" 'scroll-other-window-down
 
@@ -37,6 +37,7 @@
 
   "sd" 'kill-word
   "sx" 'backward-kill-word
+  "M-l" 'backward-kill-word
 
   "k" 'kill-line
   "sk" 'kill-whole-line
@@ -51,9 +52,15 @@
 
   "g" 'keyboard-quit
 
-  "(" 'start-kbd-macro
-  ")" 'end-kbd-macro
+  "SPC ki" 'start-kbd-macro
+  "SPC ke" 'end-kbd-macro
   "." 'kmacro-end-and-call-macro
+
+  "rr" 'point-to-register
+  "rj" 'jump-to-register
+  "rc" 'copy-to-register
+  "ri" 'insert-register
+  "ra" 'append-to-register
 
   "ç" "C-x C-x"
   "sc" "C-c C-c")
@@ -63,7 +70,8 @@
   "SPC" 'self-insert-command)
 
 (vmap
-  "w" 'kill-region)
+  "w" 'kill-region
+  "sw" 'kill-ring-save)
 
 (lmap
   "SPC" 'execute-extended-command
