@@ -25,12 +25,11 @@
 
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
-  ;; (define-key company-active-map (kbd "M-n") 'company-select-next)
   (define-key company-active-map (kbd "M-p") 'company-select-previous)
+  (define-key company-active-map (kbd "M-n") 'company-select-next)
 
   (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
   (define-key company-active-map (kbd "<return>") 'company-abort)
-  (define-key company-active-map (kbd "M-n") 'company-complete-common-or-cycle)
   )
 
 (provide 'edit)
