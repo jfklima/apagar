@@ -50,7 +50,7 @@
   ("M-m" . 'multistate-mode)
   (:map multistate-edit-state-map
         ("i" . multistate-insert-state)
-        ("R" . multistate-replace-state)
+	("sr" . multistate-replace-state)
         ("<return>" . multistate-visual-state)
   (:map multistate-insert-state-map
         ("<return>" . multistate-edit-state))
@@ -58,7 +58,6 @@
 	("<return>" . multistate-edit-state))
   (:map multistate-replace-state-map
         ("<return>" . multistate-edit-state))))
-
  (use-package general :ensure t
    :init
    (require 'multistate)
