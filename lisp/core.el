@@ -86,6 +86,7 @@
   (require 'helm-config)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
   (define-key helm-map (kbd "C-i")  'helm-select-action)
+  (define-key helm-find-files-map (kbd "M-l") 'helm-find-files-up-one-level)
 
   (setq helm-split-window-in-side-p t
 	helm-echo-input-in-header-line t)
