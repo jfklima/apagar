@@ -10,6 +10,9 @@
     "u" 'outline-up-heading
     "l" 'org-insert-link
     "o" 'org-open-at-point
+    "a" 'org-schedule
+    "e" 'org-deadline
+    "." 'org-time-stamp
     "s" 'org-sparse-tree))
 
 ;; criar um org template para org-capture
